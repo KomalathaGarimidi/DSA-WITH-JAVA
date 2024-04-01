@@ -5,6 +5,7 @@ public class BubbleSortAlgorithmDemo {
         //compare with the adjacent element and swap
         boolean swap=false;
         for(int i=0;i<length-1;i++){
+            swap=false;
             for(int j=0;j<length-i-1;j++){
                 if(array[j]>array[j+1]){
                     int temp=array[j];
