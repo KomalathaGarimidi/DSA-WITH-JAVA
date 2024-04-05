@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class InsertionSortDemo {
-    public static void insertionSort(int array[],int length){
+    public static void SelectionSort(int array[],int length){
         int i=0;
         while(i<length){
             int j=i;
