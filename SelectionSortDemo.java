@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
-public class SelectionSortDemo {
-    public static void selectionSort(int array[],int length ){
+public class InsertionSortDemo {
+    public static void InsertionSort(int array[],int length ){
         //selects the minimum element and swap the element
         for(int i=0;i<length;i++){
             int min=i;
-            for(int j=i;j<length;j++){
-                if(array[j]<array[min]){
+            for(int j=i+1;j<length;j++){
+                if(array[min]>array[j]){
                     min=j;
                 }
             }
-            int temp=array[min];
-            array[min]=array[i];
-            array[i]=temp;
+          if(min!=i){
+                int temp=array[min];
+                array[min]=array[i];
+                array[i]=temp;
+          }
         }
         print(array,length);
     }
@@ -31,6 +33,6 @@ public class SelectionSortDemo {
         for(int i=0;i<length;i++){
             array[i]=sc.nextInt();
         }
-        SelectionSortDemo.selectionSort(array,length);
+        InsertionSortDemo.InsertionSort(array,length);
     }
 }
